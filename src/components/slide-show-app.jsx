@@ -43,7 +43,7 @@ const Slideshow = () => {
 
   return (
     <div className="slideshow">
-      <h1>Slideshow App</h1>
+      
       <img
         src={`https://picsum.photos/${imageSize.width}/${imageSize.height}?image=${index}`}
         alt="Slideshow"
