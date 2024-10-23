@@ -2,20 +2,19 @@
   --primary-color: blue;
   --secondary-color: rgb(52, 112, 176);
 }
+
 .slideshow {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
   justify-items: center;
-  padding: 20px;
+  padding: 5px;
 }
 
 .slideshow-image {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  margin: 20px 0;
+  border: 2px solid var(--secondary-color);
+  transition: transform 0.3s ease;
 }
 
 .controls {
@@ -27,6 +26,7 @@
 }
 
 .controls button {
+  margin: 5px;
   padding: 10px;
   font-size: 16px;
   background-color: var(--secondary-color);
@@ -36,9 +36,10 @@
   cursor: pointer;
 }
 
-.controls button:hover{
+.controls button:hover {
   background-color: var(--primary-color);
 }
+
 .controls button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
@@ -48,8 +49,24 @@
   .controls {
     grid-template-columns: 1fr; 
   }
+}
 
-  .slideshow {
-    padding: 10px;
-  }
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.thumbnail {
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1); 
+}
+
+.zoomed {
+  transform: scale(1.25);
 }
