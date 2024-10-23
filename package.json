@@ -26,5 +26,9 @@
     "vite": "^5.4.8",
     "homepage": "https://github.com/Le-Hai-Dang/slide-show"
 
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
